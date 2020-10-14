@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="jquery.mobile.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <script src="./jquery.js"></script>
+    <script src="./jquery.mobile.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="myRecipe.css" />
+
+    <script src="myRecipe.js"></script>
+
+    <title>My Recipe</title>
+
+</head>
+
+<body>
+    <!-- Main page header -->
+    <div id="categoryList" data-role="page">
+        <div data-role="header" data-position="fixed">
+
+            <h1>My Category</h1>
+            <a href="#recipeForm" data-role="button" id="btnClear">Add Recipe</a>
+
+        </div>
+
+        <!-- main content -->
+        <div id="homePage" data-role="content">
+            <!-- content goes here -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card" style="width:400px">
+                            <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                            <div class="card-body">
+                                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <footer -->
+        <div data-role="footer">
+            <h1>@ Ak company 2020</h1>
+        </div>
+    </div>
+    <!-- home page ends -->
+    <!-- Recipe form header -->
+    <div id="recipeForm" data-role="page">
+        <div data-role="header" data-position="fixed">
+
+            <h1>Create Recipe</h1>
+            <a href="#categoryList" data-role="button" id="btnClear">Home</a>
+
+        </div>
+
+        <!-- main content -->
+        <div data-role="content">
+            <div>
+                <label for="dishName">Dish</label>
+                <input type="text" id="dishName" placeholder="dish name" />
+
+                <label for="ingredient1">Ingredient:1</label>
+                <input type="text" id="ingredient1" placeholder="ingredient" />
+
+                <a href="#createRecipe" data-role="button" id="addIngBtn">+</a>
+
+                <label for="textarea">Instructions:</label>
+
+                <textarea name="textarea" id="instruction"></textarea>
+                <label id="categoryLabel" for="category">Category:</label>
+
+                <label for="file">Image:</label>
+                <input type="file" name="file" id="imageFile" value="">
+                <img id="recipeImage" alt="hello" width="200px" height="auto" hidden />
+                <label for="ingredient1">Created by:</label>
+                <input type="text" id="username" placeholder="username" />
+
+
+            </div>
+            <a href="#createRecipe" data-role="button" id="addRecipeBtn">Add Recipe</a>
+
+        </div>
+
+        <!-- <footer -->
+        <div data-role="footer">
+            <h1>@ Ak company 2020</h1>
+        </div>
+    </div>
+    <!-- recipe form ends -->
+
+
+    <!-- Main page header -->
+    <div id="receipeList" data-role="page">
+        <div data-role="header" data-position="fixed">
+
+            <h1>Recipe List</h1>
+            <a href="#categoryList" data-role="button" id="btnClear">Home</a>
+
+        </div>
+
+        <!-- main content -->
+        <div id="receipeContent" data-role="content">
+            <div class="message">
+                Loading wait! Fetching data from the server :)
+            </div>
+            <!-- content goes here -->
+
+
+        </div>
+        <!-- <footer -->
+        <div data-role="footer">
+            <h1>@ Ak company 2020</h1>
+        </div>
+    </div>
+
+    <!-- Main page header -->
+    <div id="receipeDetailPage" data-role="page">
+        <div data-role="header" data-position="fixed">
+
+            <h1>Receipe Details</h1>
+            <a href="#categoryList" data-role="button">Home</a>
+
+        </div>
+
+        <!-- main content -->
+        <div id="receipeDetailContent" data-role="content">
+            <!-- content goes here -->
+            <div class="message" style="text-align: center">
+                <p>Loading Data! Fetching data from the server :)</p>
+            </div>
+            <div id="receipeDetails" class="container">
+                <div class="row">
+                    <div class="card" style="width:400px; margin:auto">
+                        <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer</p>
+                            <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- <footer -->
+        <div data-role="footer">
+            <h1>@ Ak company 2020</h1>
+        </div>
+    </div>
+
+    <!-- main page header ends -->
+    <!-- error message -->
+    <div data-role="popup" id="errorMessage"
+        style="max-width:400px;padding-top: 30‒;padding-top: 0px;padding-left: 30px;border-right-width: 30px;padding-bottom: 30px;"
+        data-theme="b">
+        <div data-role="header">
+            <h3 id="messageType">
+                </h1>
+        </div>
+        <div data-role="content">
+            <p id="message"></p>
+            <a href="#" data-rel="back" style="text-decoration: none;">OK</a>
+
+        </div>
+    </div>
+    <!-- error message ends -->
+</body>
+
+</html>

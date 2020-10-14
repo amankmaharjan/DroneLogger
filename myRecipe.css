@@ -1,0 +1,6 @@
+.ui-grid-a > .ui-block-a, .ui-grid-a > .ui-block-b {
+    width: 49%;
+}
+.message{
+    text-align: center;
+}
